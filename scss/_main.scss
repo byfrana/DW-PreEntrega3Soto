@@ -9,20 +9,58 @@ main {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	& &__title {
+		font-size: 12vw;
+		line-height: 1;
+		font-weight: 900;
+		text-align: center;
+		margin: -40px 0 0;
+		span {
+			display: block;
+			font-size: 4vw;
+			font-weight: 400;
+		}
+	}
 }
-.intro .intro__title {
-	color: black;
-	text-shadow: 0px 0px 4px rgb(174, 174, 174);
-	font-size: 12vw;
-	line-height: 1;
-	font-weight: 900;
-	text-align: center;
-	margin: -40px 0 0;
+
+@mixin gradient--text {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-.intro .intro__title span {
-	display: block;
-	font-size: 4vw;
-	font-weight: 400;
+
+#backgroundA .intro__title {
+	background: #6b6b83; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	@include gradient--text;
+}
+
+#bioIntro .intro__title {
+	background: #659999; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #cc8300, #659999); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #cc8300, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	@include gradient--text;
+}
+
+#duoIntro .intro__title {
+	background: #659982; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #ffba3e, #659982); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #ffba3e, #659982); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	@include gradient--text;
+}
+
+#interIntro .intro__title {
+	background: #7aeeff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #7aeeff, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #7aeeff, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	@include gradient--text;
+}
+
+#discoIntro .intro__title {
+	background: #6b6b83; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	@include gradient--text;
 }
 
 /* section */
