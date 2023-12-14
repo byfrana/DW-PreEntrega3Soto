@@ -6,7 +6,7 @@
 	left: 0;
 	width: 100%;
 	height: 80px;
-	background: black;
+	background: $bgColor2;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,12 +59,12 @@
 		li {
 			margin: 0 10px;
 			.header__link {
-				color: white;
+				color: $bgColor;
 				text-decoration: none;
 				&:after {
 					content: '';
 					display: block;
-					background: black;
+					background: $bgColor2;
 					width: 100%;
 					height: 4px;
 					transition: all 0.3s ease;
@@ -72,7 +72,7 @@
 				}
 				&:hover:after,
 				&--active:after {
-					background: white;
+					background: $bgColor;
 					margin-top: 0;
 				}
 			}

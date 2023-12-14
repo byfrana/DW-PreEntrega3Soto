@@ -1,3 +1,4 @@
+/* Colores */
 /* Reset */
 *,
 :after,
@@ -38,7 +39,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #333;
+  color: #444;
 }
 
 p {
@@ -49,6 +50,10 @@ dl dt {
   font-weight: 600;
 }
 
+strong {
+  font-weight: 600;
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -56,7 +61,7 @@ dl dt {
   left: 0;
   width: 100%;
   height: 80px;
-  background: black;
+  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,20 +110,20 @@ dl dt {
   margin: 0 10px;
 }
 .header .header__menu ul li .header__link {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 .header .header__menu ul li .header__link:after {
   content: "";
   display: block;
-  background: black;
+  background: #000;
   width: 100%;
   height: 4px;
   transition: all 0.3s ease;
   margin-top: 10px;
 }
 .header .header__menu ul li .header__link:hover:after, .header .header__menu ul li .header__link--active:after {
-  background: white;
+  background: #fff;
   margin-top: 0;
 }
 
@@ -126,14 +131,15 @@ dl dt {
 .footer {
   position: relative;
   text-align: center;
-  background: black;
+  background: #000;
 }
 .footer .footer__top {
   width: 40px;
   height: 40px;
-  background: white;
-  color: black;
-  padding: 5px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 4px;
   position: absolute;
   bottom: 3rem;
   right: 20px;
@@ -143,6 +149,10 @@ dl dt {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+.footer .footer__top:hover {
+  filter: invert(100%);
+  transition: all 0.3s ease;
 }
 .footer .footer__logo {
   width: 200px;
@@ -163,13 +173,14 @@ dl dt {
 }
 .footer .footer__menu li a:hover img {
   transform: scale(1.2);
+  transition: all 0.3s ease;
 }
 .footer .footer__menu li a img {
   width: 100%;
   height: auto;
 }
 .footer .footer__copy {
-  color: white;
+  color: #fff;
   font-size: 12px;
   margin-top: 50px;
 }
@@ -188,7 +199,6 @@ main {
 }
 .intro .intro__title {
   font-size: 12vw;
-  line-height: 1;
   font-weight: 900;
   text-align: center;
   margin: -40px 0 0;
@@ -203,6 +213,7 @@ main {
   background: #6b6b83; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -211,6 +222,7 @@ main {
   background: #659999; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #cc8300, #659999); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #cc8300, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -219,6 +231,7 @@ main {
   background: #659982; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #ffba3e, #659982); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ffba3e, #659982); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -227,6 +240,7 @@ main {
   background: #7aeeff; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #7aeeff, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #7aeeff, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -235,22 +249,23 @@ main {
   background: #6b6b83; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* section */
 .section {
-  background: white;
+  background: #fff;
   width: 100%;
 }
 
 .section--black {
-  background: black;
+  background: #000;
 }
 
 .section--border {
-  border-top: 1px solid black;
+  border-top: 1px solid #000;
 }
 
 .section .section__title,
@@ -264,6 +279,7 @@ main {
   font-weight: 300;
   line-height: 1.3;
   margin-bottom: 50px;
+  color: #222;
 }
 
 .section .section__title--form,
@@ -290,7 +306,7 @@ main {
 }
 
 .section .section__title--slide {
-  color: white;
+  color: #fff;
 }
 
 /* section slide */
@@ -316,15 +332,15 @@ main {
   width: 150px;
   margin: 20px auto;
   text-transform: uppercase;
-  background: black;
-  color: white;
-  border-color: black;
+  background: #000;
+  color: #fff;
+  border-color: #000;
   transition: all 0.3s ease;
 }
 .section .section__form input[type=submit]:hover {
-  background: white;
-  color: black;
-  border-color: black;
+  background: #fff;
+  color: #000;
+  border-color: #000;
 }
 
 /* section slide */
@@ -475,7 +491,7 @@ main {
   .header .header__menu ul {
     visibility: hidden;
     flex-direction: column;
-    background: black;
+    background: #000;
     height: calc(100vh - 80px);
     width: 80%;
     position: absolute;

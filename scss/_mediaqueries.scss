@@ -14,7 +14,6 @@
 	.intro .intro_title span {
 		font-size: 6vw;
 	}
-
 	.bg--fixed {
 		height: 50vh;
 		background-attachment: scroll;
@@ -36,7 +35,7 @@
 	.header .header__menu ul {
 		visibility: hidden;
 		flex-direction: column;
-		background: black;
+		background: $bgColor2;
 		height: calc(100vh - 80px);
 		width: 80%;
 		position: absolute;
